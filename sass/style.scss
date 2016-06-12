@@ -1,0 +1,65 @@
+/*
+Theme Name: np011 Bootstrap 3
+Theme URI: https://github.com/braginteractive/np011
+Author: Brad Williams
+Author URI: http://braginteractive.com
+Description: _s + Gulp + Bower
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: np011
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+np011 is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+
+/*--------------------------------------------------------------
+# Bootstrap
+Customize Bootstrap: http://treyhunner.com/2015/02/creating-a-custom-bootstrap-build/
+Mixins: http://www.sitepoint.com/5-useful-sass-mixins-bootstrap/
+--------------------------------------------------------------*/
+@import "bootstrap";
+
+/*--------------------------------------------------------------
+# Font Awesome
+--------------------------------------------------------------*/
+@import "font-awesome";
+
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Structure 
+--------------------------------------------------------------*/
+@import "variables-site/variables-site";
+
+/*--------------------------------------------------------------
+# WordPress Media
+--------------------------------------------------------------*/
+@import "media/media";
+
+/*--------------------------------------------------------------
+# WordPress Generated Classes
+--------------------------------------------------------------*/
+@import "modules/wp-classes";
+
+/*--------------------------------------------------------------
+# Comments
+--------------------------------------------------------------*/
+@import "modules/comments";
+
+
+/*--------------------------------------------------------------
+# Custom styles
+--------------------------------------------------------------*/
+@import "custom";
+
