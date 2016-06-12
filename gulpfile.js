@@ -75,7 +75,7 @@ options.sass = {
   precision: 10,
   //imagePath: 'assets/img',
   includePaths: [
-    config.bowerDir + '/bootstrap-sass/assets/stylesheets',
+    config.bowerDir + '/bootstrap-sass/assets/stylesheets/',
     config.bowerDir + '/fontawesome/scss',
   ]
 };

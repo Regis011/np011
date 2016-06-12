@@ -8,3 +8,7 @@ body {
 .navbar {
 	@include admin-sticky-fix;
 }
+
+article {
+    color: aqua;
+}
