@@ -1,7 +1,7 @@
 NP011 Theme - Bootstrap 3
 ===
 
-np011 is a fork of Automattic's [_s](https://github.com/Automattic/_s) WordPress starter theme that includes Gulp and Bower. 
+np011 is a fork of Automattic's [_s](https://github.com/Automattic/_s) and [Kickoff-bootstrap-3](https://github.com/braginteractive/kickoff-bootstrap-3) WordPress starter theme that includes Gulp and Bower. 
 
 # Pre-Installation
 
