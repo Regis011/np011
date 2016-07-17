@@ -11,9 +11,9 @@ var gulp = require( 'gulp' ),
   rename = require( 'gulp-rename' ),
   notify = require( 'gulp-notify' ),
   include = require( 'gulp-include' ),
-  sass = require( 'gulp-sass' );
-  imagemin = require('gulp-imagemin');
-  bower = require('gulp-bower');
+  sass = require( 'gulp-sass' ),
+  imagemin = require('gulp-imagemin'),
+  bower = require('gulp-bower'),
 
 var config = {
      bowerDir: './bower_components' 
