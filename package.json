@@ -1,9 +1,9 @@
 {
-  "name": "np011-bootstrap-3",
+  "name": "np011",
   "version": "1.0.0",
   "description": "Bootstrap 3 WordPress starter theme",
   "main": "gulpfile.js",
-  "author": "Brad Williams",
+  "author": "Vladimir Rancic",
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.2.0",
@@ -20,5 +20,10 @@
     "gulp-uglify": "^1.2.0",
     "gulp-watch": "^4.2.4",
     "jshint-stylish": "^1.0.2"
+  },
+  "dependencies": {
+    "gulp-clean-css": "^3.7.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^2.3.0"
   }
 }
