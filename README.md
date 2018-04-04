@@ -8,7 +8,7 @@ np011 is a fork of Automattic's [_s](https://github.com/Automattic/_s) and [Unde
 Basic knowledge of the command line and the following dependencies are required to use np011:
 
 - Node ([http://nodejs.org/](http://nodejs.org/)) -`npm install`
-- Gulp ([http://gulpjs.com/](http://gulpjs.com/)) - `npm install --global gulp`
+- Gulp ([http://gulpjs.com/](http://gulpjs.com/)) - `npm install -g gulp`
 - Bower ([http://bower.io/](http://bower.io/)) -`npm install -g bower`
 
 
