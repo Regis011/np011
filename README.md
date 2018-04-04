@@ -1,7 +1,7 @@
 NP011 Theme - Bootstrap 3
 ===
 
-np011 is a fork of Automattic's [_s](https://github.com/Automattic/_s) and [Kickoff-bootstrap-3](https://github.com/braginteractive/kickoff-bootstrap-3) WordPress starter theme that includes Gulp and Bower. 
+np011 is a fork of Automattic's [_s](https://github.com/Automattic/_s) and [Kickoff-bootstrap-3](https://github.com/braginteractive/kickoff-bootstrap-3) WordPress starter theme that includes Gulp and Bower.
 
 # Pre-Installation
 
@@ -28,7 +28,7 @@ Basic knowledge of the command line and the following dependencies are required 
 That's it! Now you can begin using Gulp.
 
 # Usage
-After you've installed np011, and run `npm install` and `gulp` from the command line you can start using gulp.
+After you've installed np011, and run `npm install` and `gulp` from the command line you can start using theme.
 
 ## Gulp
 
@@ -39,12 +39,6 @@ After you've installed np011, and run `npm install` and `gulp` from the command 
 
 `gulp` - Installs Bower Components and Font Awesome
 
-`gulp watch` - Automatically handle changes to CSS, javascript, php, and image optimization. Also Livereload!
+`gulp dev` - Automatically handle changes to CSS, javascript, php, and image optimization. Also Livereload!
 
-`gulp scripts` - Concatenate and minify javascript files
-
-`gulp sass` - Compile, prefix, and minify CSS files
-
-`gulp bower` - Install bower components
-
-`gulp icons` - creates /fonts/ directory and adds Font Awesome font files
+`gulp dev-bs` - Also Livereload(Browser-Sync)! First change the browser-sync options in /gulpconfig.json. Change "localhost/theme_test/" with your environment. 

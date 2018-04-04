@@ -11,36 +11,65 @@
  * @package np011
  */
 
-get_header(); ?>
+get_header();
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+$container   = get_theme_mod( 'np011_container_type' );
+?>
 
-		<?php if ( have_posts() ) : ?>
+<?php if ( is_front_page() && is_home() ) : ?>
+	<?php get_template_part( 'global-templates/hero' ); ?>
+<?php endif; ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+<div class="wrapper" id="index-wrapper">
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', get_post_format() );
-				?>
+	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-			<?php endwhile; ?>
+		<div class="row">
 
-			<?php the_posts_navigation(); ?>
+			<!-- Do the left sidebar check and opens the primary div -->
+			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-		<?php else : ?>
+			<main class="site-main" id="main">
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+				<?php if ( have_posts() ) : ?>
 
-		<?php endif; ?>
+					<?php /* Start the Loop */ ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+					<?php while ( have_posts() ) : the_post(); ?>
 
-<?php get_sidebar(); ?>
+						<?php
+
+						/*
+						 * Include the Post-Format-specific template for the content.
+						 * If you want to override this in a child theme, then include a file
+						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						 */
+						get_template_part( 'loop-templates/content', get_post_format() );
+						?>
+
+					<?php endwhile; ?>
+
+				<?php else : ?>
+
+					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+
+				<?php endif; ?>
+
+			</main><!-- #main -->
+
+			<!-- The pagination component -->
+			<?php np011_pagination(); ?>
+
+		</div><!-- #primary -->
+
+		<!-- Do the right sidebar check -->
+		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+		
+
+	</div><!-- .row -->
+
+</div><!-- Container end -->
+
+</div><!-- Wrapper end -->
+
 <?php get_footer(); ?>

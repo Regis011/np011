@@ -5,41 +5,68 @@
  * @package np011
  */
 
-get_header(); ?>
+get_header();
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+$container   = get_theme_mod( 'np011_container_type' );
 
-		<?php if ( have_posts() ) : ?>
+?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'np011' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+<div class="wrapper" id="search-wrapper">
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-				<?php
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-				?>
+		<div class="row">
 
-			<?php endwhile; ?>
+			<!-- Do the left sidebar check and opens the primary div -->
+			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<?php the_posts_navigation(); ?>
+			<main class="site-main" id="main">
 
-		<?php else : ?>
+				<?php if ( have_posts() ) : ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+					<header class="page-header">
+						
+							<h1 class="page-title"><?php printf(
+							/* translators:*/
+							 esc_html__( 'Search Results for: %s', 'np011' ),
+								'<span>' . get_search_query() . '</span>' ); ?></h1>
 
-		<?php endif; ?>
+					</header><!-- .page-header -->
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+					<?php /* Start the Loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-<?php get_sidebar(); ?>
+						<?php
+						/**
+						 * Run the loop for the search to output the results.
+						 * If you want to overload this in a child theme then include a file
+						 * called content-search.php and that will be used instead.
+						 */
+						get_template_part( 'loop-templates/content', 'search' );
+						?>
+
+					<?php endwhile; ?>
+
+				<?php else : ?>
+
+					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+
+				<?php endif; ?>
+
+			</main><!-- #main -->
+
+			<!-- The pagination component -->
+			<?php np011_pagination(); ?>
+
+		</div><!-- #primary -->
+
+		<!-- Do the right sidebar check -->
+		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+
+	</div><!-- .row -->
+
+</div><!-- Container end -->
+
+</div><!-- Wrapper end -->
+
 <?php get_footer(); ?>

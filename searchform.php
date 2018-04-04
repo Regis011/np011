@@ -1,16 +1,19 @@
 <?php
 /**
- * Search Form Template
+ * The template for displaying search forms in Underscores.me
  *
+ * @package np011
  */
-?>
 
-<form role="search" method="get" class="search-form form-inline" action="<?= esc_url(home_url('/')); ?>">
-  <label class="sr-only"><?php _e('Search for:', 'np011'); ?></label>
-  <div class="input-group">
-    <input type="search" value="<?= get_search_query(); ?>" name="s" class="search-field form-control" placeholder="<?php _e('Search', 'np011'); ?> <?php bloginfo('name'); ?>" required>
-    <span class="input-group-btn">
-      <button type="submit" class="search-submit btn btn-default"><?php _e('Search', 'np011'); ?></button>
-    </span>
-  </div>
+?>
+<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+	<label class="assistive-text" for="s"><?php esc_html_e( 'Search', 'np011' ); ?></label>
+	<div class="input-group">
+		<input class="field form-control" id="s" name="s" type="text"
+			placeholder="<?php esc_attr_e( 'Search &hellip;', 'np011' ); ?>" value="<?php the_search_query(); ?>">
+		<span class="input-group-append">
+			<input class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit"
+			value="<?php esc_attr_e( 'Search', 'np011' ); ?>">
+	</span>
+	</div>
 </form>
