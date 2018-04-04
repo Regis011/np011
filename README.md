@@ -1,7 +1,7 @@
-NP011 Theme - Bootstrap 3
+NP011 Theme - Bootstrap 4
 ===
 
-np011 is a fork of Automattic's [_s](https://github.com/Automattic/_s) and [Kickoff-bootstrap-3](https://github.com/braginteractive/kickoff-bootstrap-3) WordPress starter theme that includes Gulp and Bower.
+np011 is a fork of Automattic's [_s](https://github.com/Automattic/_s) and [Understrap](https://understrap.com/) WordPress starter theme that includes Gulp and Bower.
 
 # Pre-Installation
 
@@ -41,4 +41,4 @@ After you've installed np011, and run `npm install` and `gulp` from the command 
 
 `gulp dev` - Automatically handle changes to CSS, javascript, php, and image optimization. Also Livereload!
 
-`gulp dev-bs` - Also Livereload(Browser-Sync)! First change the browser-sync options in /gulpconfig.json. Change "localhost/theme_test/" with your environment. 
+`gulp dev-bs` - Also Livereload(Browser-Sync)! First change the browser-sync options in /gulpconfig.json. Change "localhost/theme_test/" with your environment.
