@@ -1,16 +1,13 @@
-NP011 Theme - Bootstrap 4
+NP011 starter theme with webpack and bootstrap 4
 ===
 
-np011 is a fork of Automattic's [_s](https://github.com/Automattic/_s) and [Understrap](https://understrap.com/) WordPress starter theme that includes Gulp and Bower.
+np011 is a fork of Automattic's [_s](https://github.com/Automattic/_s) and [Understrap](https://understrap.com/) WordPress starter theme that includes Webpack, Boostrap 4 and DOM-based Routing for JavaScript.
 
 # Pre-Installation
 
 Basic knowledge of the command line and the following dependencies are required to use np011:
 
-- Node ([http://nodejs.org/](http://nodejs.org/)) -`npm install`
-- Gulp ([http://gulpjs.com/](http://gulpjs.com/)) - `npm install -g gulp`
-- Bower ([http://bower.io/](http://bower.io/)) -`npm install -g bower`
-
+- Node ([http://nodejs.org/](http://nodejs.org/))
 
 ## Manual Installation
 
@@ -21,24 +18,17 @@ Basic knowledge of the command line and the following dependencies are required 
 
 `git clone https://github.com/Regis011/np011.git`
 
-
-##### 3) Install Gulp and Dependencies
-- Run `npm install && bower install` from the command line to install Gulp and pull down any dependencies via Bower.
-
-That's it! Now you can begin using Gulp.
-
-# Usage
-After you've installed np011, and run `npm install` and `gulp` from the command line you can start using theme.
-
-## Gulp
-
-##### 1) Navigate to your new theme
+##### 3) Navigate to your new theme
 `cd /your-project/wordpress/wp-content/themes/your-new-theme`
 
-##### 2) Gulp tasks available:
+##### 4) Install Webpack and all Dependencies
+- Run `npm install` from the command line to install dependecy and pull down any dependency via npm.
 
-`gulp` - Installs Bower Components and Font Awesome
+That's it! Now you can begin using webpack and all dependency.
 
-`gulp dev` - Automatically handle changes to CSS, javascript, php, and image optimization. Also Livereload!
+##### 5) Usage Watch
+After you've installed np011 theme and run `npm install` from the command line you can start using themes and watch your changes throw the `npm run dev`.
 
-`gulp dev-bs` - Also Livereload(Browser-Sync)! First change the browser-sync options in /gulpconfig.json. Change "localhost/theme_test/" with your environment.
+## For production environments
+
+run `npm run build`
