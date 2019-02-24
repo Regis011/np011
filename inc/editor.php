@@ -13,7 +13,7 @@ add_action( 'admin_init', 'np011_wpdocs_theme_add_editor_styles' );
 
 if ( ! function_exists ( 'np011_wpdocs_theme_add_editor_styles' ) ) {
   function np011_wpdocs_theme_add_editor_styles() {
-    add_editor_style( 'css/custom-editor-style.min.css' );
+    add_editor_style( '/assets/css/editor.style.css' );
   }
 }
 
@@ -62,7 +62,7 @@ if ( ! function_exists ( 'np011_tiny_mce_before_init' ) ) {
             'inline' => 'cite'
         )
     );
-    
+
       if ( isset( $settings['style_formats'] ) ) {
         $orig_style_formats = json_decode($settings['style_formats'],true);
         $style_formats = array_merge($orig_style_formats,$style_formats);
