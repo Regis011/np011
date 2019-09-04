@@ -1,6 +1,6 @@
 {
   "name": "np011",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "scripts": {
     "dev": "cross-env BABEL_ENV=default MODE=development webpack --watch",
     "build": "cross-env BABEL_ENV=default MODE=production webpack"
