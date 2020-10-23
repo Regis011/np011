@@ -3,3 +3,4 @@ dist/
 .DS_Store
 /assets/js/
 /assets/css/
+package-lock.json
