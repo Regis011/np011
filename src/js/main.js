@@ -7,7 +7,7 @@ require('../style.scss');
 require('../../style.css');
 
 //Require Slick
-//require('script-loader!../../node_modules/slick-carousel/slick/slick');
+require('script-loader!../../node_modules/slick-carousel/slick/slick');
 
 console.log('main.js!');
 

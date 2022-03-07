@@ -1,7 +1,9 @@
-// Underscores
 @import './sass/underscores/captions';
 @import './sass/underscores/galleries';
 @import './sass/underscores/media';
 
-//Boostrap
 @import './sass/autoload/boostrap';
+
+.navbar {
+    padding: 100px !important;
+}

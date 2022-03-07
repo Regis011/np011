@@ -20,7 +20,7 @@ const editorCSSPlugin = new ExtractTextPlugin( {
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP === 'true';
 
 const notify = new WebpackBuildNotifierPlugin({
-	title: "Egmont Blocks Webpack Build",
+	title: "Blocks Webpack Build",
 		logo: path.resolve("./img/favicon.png"),
 		suppressSuccess: false,
 		successSound: false
@@ -50,18 +50,26 @@ const extractConfig = {
 							'Firefox ESR',
 							'not ie < 9',
 						],
-						flexbox: 'no-2009',
 					} ),
 				],
 			},
 		},
 		// "sass" loader converts SCSS to CSS.
+		// {
+		// 	loader: 'sass-loader',
+		// 	options: {
+		// 		outputStyle: 'production' === process.env.MODE ? 'compressed' : 'nested',
+		// 	},
+		// },
 		{
-			loader: 'sass-loader',
-			options: {
-				outputStyle: 'production' === process.env.MODE ? 'compressed' : 'nested',
-			},
-		},
+			loader: "sass-loader",
+            options: {
+              sourceMap: true,
+              sassOptions: {
+                outputStyle: 'production' === process.env.MODE ? 'compressed' : 'nested',
+              },
+            },
+		}
 	],
 };
 
